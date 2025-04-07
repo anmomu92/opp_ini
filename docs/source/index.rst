@@ -15,8 +15,4 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
-.. automodule:: opp_ini.opp_ini
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
+    opp_ini

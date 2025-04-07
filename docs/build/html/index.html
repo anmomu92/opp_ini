@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>opp_ini documentation &#8212; opp_ini 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="opp-ini-documentation">
+<h1>opp_ini documentation<a class="headerlink" href="#opp-ini-documentation" title="Link to this heading">¶</a></h1>
+<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
+documentation for details.</p>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="py class" id="module-opp_ini.opp_ini">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">Application</span></span><a class="headerlink" href="#opp_ini.opp_ini.Application" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a generic application
+It has attributes and methods common to every application
+It is the base class of other more specific applications</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application.get_filename">
+<span class="sig-name descname"><span class="pre">get_filename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Application.get_filename" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application.get_final_load">
+<span class="sig-name descname"><span class="pre">get_final_load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Application.get_final_load" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application.get_initial_load">
+<span class="sig-name descname"><span class="pre">get_initial_load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Application.get_initial_load" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application.get_msg_size">
+<span class="sig-name descname"><span class="pre">get_msg_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Application.get_msg_size" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Application.get_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application.get_steps">
+<span class="sig-name descname"><span class="pre">get_steps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Application.get_steps" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application.set_filename">
+<span class="sig-name descname"><span class="pre">set_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Application.set_filename" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application.set_load">
+<span class="sig-name descname"><span class="pre">set_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Application.set_load" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Application.set_message_size">
+<span class="sig-name descname"><span class="pre">set_message_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Application.set_message_size" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Applications">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">Applications</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Applications" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Applications.S">
+<span class="sig-name descname"><span class="pre">S</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#opp_ini.opp_ini.Applications.S" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.BXI3">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">BXI3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.BXI3" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#opp_ini.opp_ini.Switch" title="opp_ini.opp_ini.Switch"><code class="xref py py-class docutils literal notranslate"><span class="pre">Switch</span></code></a></p>
+<p>This is a class representing the BXI3 switch architecture</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Switch</strong> – the parent switch class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">CongestionTechniques</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques.bbq">
+<span class="sig-name descname"><span class="pre">bbq</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques.bbq" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques.dbbm">
+<span class="sig-name descname"><span class="pre">dbbm</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques.dbbm" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques.flow2sl">
+<span class="sig-name descname"><span class="pre">flow2sl</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques.flow2sl" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques.obqa">
+<span class="sig-name descname"><span class="pre">obqa</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques.obqa" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques.oneq">
+<span class="sig-name descname"><span class="pre">oneq</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques.oneq" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques.vftree">
+<span class="sig-name descname"><span class="pre">vftree</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques.vftree" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques.voqnet">
+<span class="sig-name descname"><span class="pre">voqnet</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques.voqnet" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques.voqsw">
+<span class="sig-name descname"><span class="pre">voqsw</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques.voqsw" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.CongestionTechniques.xflow2sl">
+<span class="sig-name descname"><span class="pre">xflow2sl</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#opp_ini.opp_ini.CongestionTechniques.xflow2sl" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.IB_NDR">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">IB_NDR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.IB_NDR" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#opp_ini.opp_ini.Switch" title="opp_ini.opp_ini.Switch"><code class="xref py py-class docutils literal notranslate"><span class="pre">Switch</span></code></a></p>
+<p>This is a class representing the IB_NDR switch architecture</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Switch</strong> – the parent switch class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.RLFT">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">RLFT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.RLFT" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#opp_ini.opp_ini.Topology" title="opp_ini.opp_ini.Topology"><code class="xref py py-class docutils literal notranslate"><span class="pre">Topology</span></code></a></p>
+<p>This is a class representing a Real Life Fat Tree topology</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Topology</strong> – the parent class topology</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.RLFT.get_arity">
+<span class="sig-name descname"><span class="pre">get_arity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.RLFT.get_arity" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.RLFT.get_nodes">
+<span class="sig-name descname"><span class="pre">get_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.RLFT.get_nodes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.RLFT.get_stages">
+<span class="sig-name descname"><span class="pre">get_stages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.RLFT.get_stages" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.RLFT.set_arity">
+<span class="sig-name descname"><span class="pre">set_arity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.RLFT.set_arity" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.RLFT.set_nodes">
+<span class="sig-name descname"><span class="pre">set_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.RLFT.set_nodes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.RLFT.set_stages">
+<span class="sig-name descname"><span class="pre">set_stages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stages</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.RLFT.set_stages" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.RoutingAlgorithms">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">RoutingAlgorithms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.RoutingAlgorithms" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.RoutingAlgorithms.destro">
+<span class="sig-name descname"><span class="pre">destro</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#opp_ini.opp_ini.RoutingAlgorithms.destro" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Simulation">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">Simulation</span></span><a class="headerlink" href="#opp_ini.opp_ini.Simulation" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a simulation
+It contains methods to write and read simulations</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Simulation.get_config">
+<span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Simulation.get_config" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Simulation.get_root_dir">
+<span class="sig-name descname"><span class="pre">get_root_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Simulation.get_root_dir" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Simulation.set_app">
+<span class="sig-name descname"><span class="pre">set_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Simulation.set_app" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Simulation.set_root_dir">
+<span class="sig-name descname"><span class="pre">set_root_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topology_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Simulation.set_root_dir" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Simulation.set_sw">
+<span class="sig-name descname"><span class="pre">set_sw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Simulation.set_sw" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Simulation.set_topo">
+<span class="sig-name descname"><span class="pre">set_topo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Simulation.set_topo" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the topology object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>arg</strong> (<em>-</em>) – the substrings that will be concatenated to the configuration name</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArbiters">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">SwArbiters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.SwArbiters" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArbiters.Aging">
+<span class="sig-name descname"><span class="pre">Aging</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArbiters.Aging" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArbiters.RR">
+<span class="sig-name descname"><span class="pre">RR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArbiters.RR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArbiters.WRR">
+<span class="sig-name descname"><span class="pre">WRR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArbiters.WRR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArchs">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">SwArchs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.SwArchs" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArchs.BXI3">
+<span class="sig-name descname"><span class="pre">BXI3</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArchs.BXI3" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArchs.BXI3_JESUS">
+<span class="sig-name descname"><span class="pre">BXI3_JESUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArchs.BXI3_JESUS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArchs.IB_DDR">
+<span class="sig-name descname"><span class="pre">IB_DDR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArchs.IB_DDR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArchs.IB_EDR">
+<span class="sig-name descname"><span class="pre">IB_EDR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArchs.IB_EDR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArchs.IB_NDR">
+<span class="sig-name descname"><span class="pre">IB_NDR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArchs.IB_NDR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArchs.IB_QDR">
+<span class="sig-name descname"><span class="pre">IB_QDR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArchs.IB_QDR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.SwArchs.PORT_PFC">
+<span class="sig-name descname"><span class="pre">PORT_PFC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#opp_ini.opp_ini.SwArchs.PORT_PFC" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">Switch</span></span><a class="headerlink" href="#opp_ini.opp_ini.Switch" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a generic switch
+It has attributes and methods common to every topology
+It is the base class of other more specific classes</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.get_arbiter">
+<span class="sig-name descname"><span class="pre">get_arbiter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.get_arbiter" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.get_architecture">
+<span class="sig-name descname"><span class="pre">get_architecture</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.get_architecture" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.get_bubble">
+<span class="sig-name descname"><span class="pre">get_bubble</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.get_bubble" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.get_num_queues">
+<span class="sig-name descname"><span class="pre">get_num_queues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.get_num_queues" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.get_queue_scheme">
+<span class="sig-name descname"><span class="pre">get_queue_scheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.get_queue_scheme" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.get_request_processing_time">
+<span class="sig-name descname"><span class="pre">get_request_processing_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.get_request_processing_time" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.get_routing">
+<span class="sig-name descname"><span class="pre">get_routing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.get_routing" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.get_voq">
+<span class="sig-name descname"><span class="pre">get_voq</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.get_voq" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.set_arbiter">
+<span class="sig-name descname"><span class="pre">set_arbiter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arbiter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.set_arbiter" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.set_architecture">
+<span class="sig-name descname"><span class="pre">set_architecture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">architecture</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.set_architecture" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.set_bubble">
+<span class="sig-name descname"><span class="pre">set_bubble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bubble</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.set_bubble" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.set_num_queues">
+<span class="sig-name descname"><span class="pre">set_num_queues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_queues</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.set_num_queues" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.set_queue_scheme">
+<span class="sig-name descname"><span class="pre">set_queue_scheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue_scheme</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.set_queue_scheme" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.set_request_processing_time">
+<span class="sig-name descname"><span class="pre">set_request_processing_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_processing_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.set_request_processing_time" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.set_routing">
+<span class="sig-name descname"><span class="pre">set_routing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">routing</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.set_routing" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Switch.set_voq">
+<span class="sig-name descname"><span class="pre">set_voq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voq</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Switch.set_voq" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Synthetic">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">Synthetic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Synthetic" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#opp_ini.opp_ini.Application" title="opp_ini.opp_ini.Application"><code class="xref py py-class docutils literal notranslate"><span class="pre">Application</span></code></a></p>
+<p>This class represents a synthetic application
+It has attributes and methods common to every synthetic application
+It is derived from a generic application
+It is the base class of other more specific synthetic applications</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Application</strong> – the parent application class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">Topologies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Topologies" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.DragonflyAbsolute">
+<span class="sig-name descname"><span class="pre">DragonflyAbsolute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.DragonflyAbsolute" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.DragonflyCircular">
+<span class="sig-name descname"><span class="pre">DragonflyCircular</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.DragonflyCircular" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.DragonflyHammingGraph">
+<span class="sig-name descname"><span class="pre">DragonflyHammingGraph</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.DragonflyHammingGraph" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.DragonflyPalmTree">
+<span class="sig-name descname"><span class="pre">DragonflyPalmTree</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.DragonflyPalmTree" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.FatXaryXtree">
+<span class="sig-name descname"><span class="pre">FatXaryXtree</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.FatXaryXtree" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.Hypercube">
+<span class="sig-name descname"><span class="pre">Hypercube</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.Hypercube" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.KNSXary2direct1indirect">
+<span class="sig-name descname"><span class="pre">KNSXary2direct1indirect</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.KNSXary2direct1indirect" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.KNSXary2directXindirect">
+<span class="sig-name descname"><span class="pre">KNSXary2directXindirect</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.KNSXary2directXindirect" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.KNSXary3direct1indirect">
+<span class="sig-name descname"><span class="pre">KNSXary3direct1indirect</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.KNSXary3direct1indirect" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.Megafly_topgen">
+<span class="sig-name descname"><span class="pre">Megafly_topgen</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.Megafly_topgen" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.Mesh2D">
+<span class="sig-name descname"><span class="pre">Mesh2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.Mesh2D" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.Mesh3D">
+<span class="sig-name descname"><span class="pre">Mesh3D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.Mesh3D" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.Mesh4D">
+<span class="sig-name descname"><span class="pre">Mesh4D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">13</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.Mesh4D" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.NHosts1Switch">
+<span class="sig-name descname"><span class="pre">NHosts1Switch</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">14</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.NHosts1Switch" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.NHosts2Switches">
+<span class="sig-name descname"><span class="pre">NHosts2Switches</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.NHosts2Switches" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.PGFT">
+<span class="sig-name descname"><span class="pre">PGFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">16</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.PGFT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.PGFT_Cell">
+<span class="sig-name descname"><span class="pre">PGFT_Cell</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">17</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.PGFT_Cell" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.RLFT">
+<span class="sig-name descname"><span class="pre">RLFT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">18</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.RLFT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.RLFT_tables">
+<span class="sig-name descname"><span class="pre">RLFT_tables</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">19</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.RLFT_tables" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.ShuffleXstageXexchange">
+<span class="sig-name descname"><span class="pre">ShuffleXstageXexchange</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.ShuffleXstageXexchange" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.SlimFly">
+<span class="sig-name descname"><span class="pre">SlimFly</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">21</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.SlimFly" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.Torus2D">
+<span class="sig-name descname"><span class="pre">Torus2D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">22</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.Torus2D" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.Torus3D">
+<span class="sig-name descname"><span class="pre">Torus3D</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">23</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.Torus3D" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topologies.Torus3D_Energy">
+<span class="sig-name descname"><span class="pre">Torus3D_Energy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24</span></em><a class="headerlink" href="#opp_ini.opp_ini.Topologies.Torus3D_Energy" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topology">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">Topology</span></span><a class="headerlink" href="#opp_ini.opp_ini.Topology" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents a generic topology
+It has attributes and methods common to every topology
+It is the base class of other more specific classes
+Current derived classes that have been implemented:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>RLFT</p></li>
+<li><dl class="simple">
+<dt>Torus</dt><dd><ul>
+<li><p>Torus2D</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topology.get_channel_distance">
+<span class="sig-name descname"><span class="pre">get_channel_distance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Topology.get_channel_distance" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topology.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Topology.get_name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topology.get_network">
+<span class="sig-name descname"><span class="pre">get_network</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Topology.get_network" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topology.get_nodes">
+<span class="sig-name descname"><span class="pre">get_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Topology.get_nodes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Topology.set_channel_distance">
+<span class="sig-name descname"><span class="pre">set_channel_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Topology.set_channel_distance" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Torus">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">Torus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Torus" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#opp_ini.opp_ini.Topology" title="opp_ini.opp_ini.Topology"><code class="xref py py-class docutils literal notranslate"><span class="pre">Topology</span></code></a></p>
+<p>This is a class representing a Torus of generic dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Topology</strong> – the parent class topology</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Torus.get_dimensions">
+<span class="sig-name descname"><span class="pre">get_dimensions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Torus.get_dimensions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Torus2D">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">Torus2D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Torus2D" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#opp_ini.opp_ini.Torus" title="opp_ini.opp_ini.Torus"><code class="xref py py-class docutils literal notranslate"><span class="pre">Torus</span></code></a></p>
+<p>This is a class representing a Torus of two dimensions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Topology</strong> – the parent class topology</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Torus2D.get_dim1">
+<span class="sig-name descname"><span class="pre">get_dim1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Torus2D.get_dim1" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Torus2D.get_dim2">
+<span class="sig-name descname"><span class="pre">get_dim2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Torus2D.get_dim2" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Torus2D.get_nodes">
+<span class="sig-name descname"><span class="pre">get_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Torus2D.get_nodes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Torus2D.set_dim1">
+<span class="sig-name descname"><span class="pre">set_dim1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Torus2D.set_dim1" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Torus2D.set_dim2">
+<span class="sig-name descname"><span class="pre">set_dim2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Torus2D.set_dim2" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.Torus2D.set_nodes">
+<span class="sig-name descname"><span class="pre">set_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.Torus2D.set_nodes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.backup_configuration">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">backup_configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.backup_configuration" title="Link to this definition">¶</a></dt>
+<dd><p>Backups the current omnetpp.ini file in the root of the simulation directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> (<em>-</em>) – the simulation that contains the fields of the configuration file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.check_configuration">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">check_configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#opp_ini.opp_ini.check_configuration" title="Link to this definition">¶</a></dt>
+<dd><p>It returns the name of the configuration from omnetpp.ini.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> (<a class="reference internal" href="#opp_ini.opp_ini.Simulation" title="opp_ini.opp_ini.Simulation"><em>Simulation</em></a>) – the simulation folder to be checked.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the name of the configuration.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.get_configuration">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">get_configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#opp_ini.opp_ini.get_configuration" title="Link to this definition">¶</a></dt>
+<dd><p>It retrieves the first configuration within the omnetpp.ini file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> (<a class="reference internal" href="#opp_ini.opp_ini.Simulation" title="opp_ini.opp_ini.Simulation"><em>Simulation</em></a>) – the simulation folder to be checked.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The first configuration found in the omnetpp.ini file. Prints “Nothing Found” if no configurations where found</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.get_configurations">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">get_configurations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.get_configurations" title="Link to this definition">¶</a></dt>
+<dd><p>It retrieves all the configurations within the omnetpp.ini file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> – the simulation folder to be checked</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of the configurations located in the omnetpp.ini file. Prints “Nothing Found” if no configurations where found</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.get_switch_arbiter">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">get_switch_arbiter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.get_switch_arbiter" title="Link to this definition">¶</a></dt>
+<dd><p>It retrieves the current switch arbiter in use</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> – the simulation folder to be checked</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a string with the current switch arbiter being used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.get_switch_architecture">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">get_switch_architecture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.get_switch_architecture" title="Link to this definition">¶</a></dt>
+<dd><p>It retrieves the current switch architecture in use</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> – the simulation folder to be checked</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a string with the current switch architecture being used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.get_switch_request_processing_time">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">get_switch_request_processing_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.get_switch_request_processing_time" title="Link to this definition">¶</a></dt>
+<dd><p>It retrieves the current switch request processing time in use</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> – the simulation folder to be checked</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a string with the current switch request processing time</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.get_switch_routing">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">get_switch_routing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.get_switch_routing" title="Link to this definition">¶</a></dt>
+<dd><p>It retrieves the current switch routing algorithm in use</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> – the simulation folder to be checked</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a string with the current switch routing algorithm being used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.list_applications">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">list_applications</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.list_applications" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.list_congestion_control_technique">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">list_congestion_control_technique</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.list_congestion_control_technique" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.list_switch_arbiters">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">list_switch_arbiters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sw_arbiters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.list_switch_arbiters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.list_switch_architectures">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">list_switch_architectures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sw_archs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.list_switch_architectures" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.list_switch_queue_schemes">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">list_switch_queue_schemes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sw_queue_schemes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.list_switch_queue_schemes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.list_switch_routing_algorithms">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">list_switch_routing_algorithms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sw_routing_algorithms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.list_switch_routing_algorithms" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.list_topologies">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">list_topologies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topologies</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.list_topologies" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.set_configuration_name">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">set_configuration_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#opp_ini.opp_ini.set_configuration_name" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the name of the configuration file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> (<em>-</em>) – the simulation that contains the fields of the configuration file.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the name of the configuration.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>str</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.set_default_configuration">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">set_default_configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topology</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.set_default_configuration" title="Link to this definition">¶</a></dt>
+<dd><p>It writes a default omnetpp.ini file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> – the simulation folder where to write the file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opp_ini.opp_ini.set_new_configuration">
+<span class="sig-prename descclassname"><span class="pre">opp_ini.opp_ini.</span></span><span class="sig-name descname"><span class="pre">set_new_configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">simulation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opp_ini.opp_ini.set_new_configuration" title="Link to this definition">¶</a></dt>
+<dd><p>It adds a new configuration in the omnetpp.ini file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>simulation</strong> (<a class="reference internal" href="#opp_ini.opp_ini.Simulation" title="opp_ini.opp_ini.Simulation"><em>Simulation</em></a>) – The simulation folder where the omnetpp.ini file is located.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">opp_ini</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, anmomu92.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

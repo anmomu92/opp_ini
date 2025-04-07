@@ -6,34 +6,23 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath("../../opp_ini/"))
-
-project = "opp_ini"
-copyright = "2025, anmomu92"
-author = "anmomu92"
-release = "0.1.0"
+project = 'opp_ini'
+copyright = '2025, anmomu92'
+author = 'anmomu92'
+release = '0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
-    "sphinx.ext.autodoc",  # Extracts docstrings
-    "sphinx.ext.napoleon",  # Supports Google/NumPy-style docstrings
-    "sphinx.ext.intersphinx",  # Links to external documentation
-    "sphinx.ext.viewcode",  # Adds source code links
-    "sphinx_autodoc_typehints",  # Shows type hints
-    "myst_parser",  # Supports Markdown files]
-]
+extensions = []
 
-templates_path = ["_templates"]
+templates_path = ['_templates']
 exclude_patterns = []
+
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "alabaster"
-html_static_path = ["_static"]
+html_theme = 'alabaster'
+html_static_path = ['_static']

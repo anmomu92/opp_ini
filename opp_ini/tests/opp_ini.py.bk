@@ -1,0 +1,370 @@
+##############
+# Imports
+##############
+
+import os
+import glob
+
+# Data structures
+from enum import Enum
+
+# Appearance
+from pprint import pprint
+
+#############
+# Constant
+#############
+SAURON_ROOT = os.environ["SAURON_ROOT"]
+
+#############
+# Classes 
+#############
+
+# Base classes
+class Simulation:
+    """
+    This class represents a simulation
+    It contains methods to write and read simulations
+    """
+    root_dir = "" 
+
+    def __init__(self, topology, switch, application):
+        pass
+        self.name = ""
+        self.topology = topology
+        self.switch = switch
+        self.application = application
+
+    ###########
+    # Setters 
+    ###########
+    def set_root_dir(self, topology_name):
+        self.root_dir = SAURON_ROOT + "/simulations" + topology_name
+
+    def set_name(self, *args):
+        for i in range(len(args)):
+            self.name = self.name + args[i]
+
+    ###########
+    # Getters 
+    ###########
+    def get_root_dir(self):
+        return self.root_dir
+
+
+class Topology:
+    """
+    This class represents a generic topology
+    It has attributes and methods common to every topology
+    It is the base class of other more specific classes
+    Current derived classes that have been implemented:
+        - RLFT
+        - Torus
+            - Torus2D
+    """
+    ####################
+    # Class attributes
+    ####################
+    name = "rlft"
+    channel_distance = 5
+    nodes = 0
+
+    def __init__(self):
+        pass
+
+    ###########
+    # Setters 
+    ###########
+    def set_channel_distance(self, distance):
+        self.channel_distance = distance
+
+    ###########
+    # Getters
+    ###########
+    def get_name(self):
+        return self.name
+
+
+    def get_nodes(self):
+        return self.nodes
+
+class Switch:
+    """
+    This class represents a generic switch
+    It has attributes and methods common to every topology
+    It is the base class of other more specific classes
+    """
+    ####################
+    # Class attributes
+    ####################
+    name = "IB-NDR"
+    arbiter = "Aging"
+    voq = "False"
+    
+    def __init__(self):
+        pass
+
+    ###########
+    # Setters
+    ###########
+    def set_arbiter(self, arbiter):
+        self.arbiter = arbiter
+
+    def set_voq(self, voq):
+        self.voq = voq
+
+    ###########
+    # Getters
+    ###########
+    def get_name(self):
+        return self.name
+   
+    def get_arbiter(self):
+        return self.arbiter
+
+    def get_voq(self):
+        return self.voq
+
+class Application:
+    """
+    This class represents a generic application 
+    It has attributes and methods common to every application 
+    It is the base class of other more specific applications 
+    """
+    ####################
+    # Class attributes
+    ####################
+    name = "Application"
+    message_size = 0 
+    initial_load = 0
+    final_load = 0
+    steps = 0
+    file_name = "R"
+    
+    def __init__(self):
+        pass
+
+    ###########
+    # Setters
+    ###########
+    def set_message_size(self, msg_size):
+        self.message_size = msg_size 
+
+    def set_load(self, initial=0, final=100, steps=0):
+        self.initial_load = initial
+        self.final_load = final
+        self.steps = steps
+ 
+    def set_filename(self, filename):
+        self.file_name = filename
+
+    ###########
+    # Getters
+    ###########
+    def get_name(self):
+        return self.name
+   
+    def get_msg_size(self):
+        return self.message_size
+
+    def get_initial_load(self):
+        return self.initial_load
+
+    def get_final_load(self):
+        return self.final_load
+    
+    def get_steps(self):
+        return self.steps
+
+    def get_filename(self):
+        return self.filename
+
+
+# Derived classes from topology
+
+class RLFT(Topology):
+    """Docstring."""
+    def __init__(self, parent=None):
+        super().__init__()
+        self.parent = parent
+        self.name = "rlft"
+        self.arity = 2
+        self.stages = 2
+
+    def set_nodes(self, arity, stages):
+        self.arity = arity
+        self.stages = stages
+        self.nodes = 2*(pow(arity, stages))
+
+    def get_arity(self):
+        return self.arity
+
+    def get_stages(self):
+        return self.stages
+
+class Torus(Topology):
+    """Docstring."""
+    def __init__(self, parent=None):
+        super().__init__()
+        self.parent = parent
+        self.name = "torus"
+        self.dimensions = 2
+
+    def get_dimensions(self):
+        return self.dimensions
+
+class Torus2D(Torus):
+    """Docstring."""
+    def __init__(self, parent=None):
+        super().__init__()
+        self.parent = parent
+        self.name = "torus2d"
+        self.dim0 = 2
+        self.dim1 = 2
+
+    def set_nodes(self, dim0, dim1):
+        self.dim0 = dim0
+        self.dim1 = dim1
+        self.nodes = (dim0*dim1)
+
+
+# Derived classes from switch
+class IB_NDR(Switch):
+    def __init__(self, parent=None):
+        super().__init__()
+        self.parent = parent
+        self.name = "ib_ndr"
+
+class BXI3(Switch):
+    def __init__(self, parent=None):
+        super().__init__()
+        self.parent = parent
+        self.name = "bxi3"
+
+# Derived classes from Application
+class Synthetic(Application):
+    """
+    This class represents a synthetic application 
+    It has attributes and methods common to every synthetic application 
+    It is derived from a generic application
+    It is the base class of other more specific synthetic applications 
+    """
+
+    def __init__(self, parent=None):
+        super().__init__()
+        self.parent = parent
+        self.name = "SyntheticApplication"
+
+
+########
+# Enum
+########
+class Topologies(Enum):
+    DRAGONFLYABSOLUTE = 1
+    DRAGONFLYCIRCULAR = 2
+    DRAGONFLYHAMMINGGRAPH = 3
+    DRAGONFLYPALMTREE = 4
+    FATXARYXTREE = 5
+    HYPERCUBE = 6
+    KNSXARY3DIRECT1INDIRECT = 7
+    KNSXARY3DIRECTXINDIRECT = 8
+    KNSXARY4DIRECT1INDIRECT = 9
+    MEGAFLY_TOPGEN = 10
+    MESH2D = 11
+    MESH3D = 12
+    MESH4D = 13
+    NHOSTS1SWITCH = 14
+    NHOSTS2SWITCHES = 15
+    PGFT = 16
+    PGFT_CELL = 17
+    RLFT = 18
+    RLFT_TABLES = 19
+    SHUFFLEXSTAGEXEXCHANGE = 20
+    SLIMFLY = 21
+    TORUS2D = 22
+    TORUS3D = 23
+    TORUS3D_ENERGY = 24
+
+class SwArchs(Enum):
+    # Input Queue (IQ)
+    IB_QDR = 1
+    IB_DDR = 2
+    IB_EDR = 3
+    IB_NDR = 4
+    # Combined Input-Output Queue (CIOQ)
+    PORT_PFC = 5
+    BXI3 = 6 
+    BXI3_JESUS = 7 
+
+class Applications(Enum):
+    S = 1           # Synthetic
+
+##########
+# Methods
+##########
+
+def list_topologies(topologies):
+    for topology in Topologies:
+        topologies.append(topology.name)
+
+def list_switch_architectures(sw_archs):
+    for sw_arch in SwArchs:
+        sw_archs.append(sw_arch.name)
+
+def list_applications(apps):
+    for app in Applications:
+        apps.append(app.name)
+
+#def write_topology(topology):
+
+def check_configuration(simulation, config_name="[Config"):
+    """
+    This function returns the configurations defined in the current omnetpp.ini
+    Inputs:
+        - simulation: the current simulation
+        - config_name: name of the configuration you want to search. It defaults to [Config
+    Outputs:
+        - True if configuration found
+        - Nothing if configuration not found
+    """
+    
+    opp_file = simulation.get_root_dir() + "/omnetpp.ini" 
+    
+    # Open the file and search for the target line
+    with open(opp_file, 'r') as file:
+        for line_number, line in enumerate(file, start=1):
+            if config_name in line:
+                return True 
+        else:
+            print("Not Found") 
+
+def get_configurations(simulation, config_name="[Config"):
+    opp_file = simulation.get_root_dir() + "/omnetpp.ini" 
+    configs = []
+    
+    # Open the file and search for the target line
+    with open(opp_file, 'r') as file:
+        for line_number, line in enumerate(file, start=1):
+            if config_name in line:
+                configs.append(line[8:line.index("]")])
+        else:
+            print("Nothing Found") 
+
+    return configs
+
+def get__switch_architecture(simulation):
+    """
+    This function returns the current switch architecture used in the current omnetpp.ini
+    Args:
+        - simulation: the current simulation
+    """
+
+    opp_file = simulation.get_root_dir() + "/omnetpp.ini" 
+    
+    # Open the file and search for the target line
+    with open(opp_file, 'r') as file:
+        for line_number, line in enumerate(file, start=1):
+            if config_name in line:
+                return True 
+        else:
+            print("Not Found") 

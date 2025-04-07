@@ -1,0 +1,13 @@
+import opp_ini as oi
+
+topo = oi.Topology()
+sw = oi.Switch()
+app = oi.Application()
+
+simulation = oi.Simulation()
+simulation.set_root_dir("RLFT")
+topology = oi.Topology()
+
+print("Root directory of the current simulation is ", simulation.get_root_dir())
+
+oi.set_default_configuration(simulation,topology)

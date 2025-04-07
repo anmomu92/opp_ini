@@ -6,7 +6,8 @@ sphinx:
 build:
   os: ubuntu-24.04
   tools:
-    python:
-      version: 3.11
-      install:
-        - requirements: docs/requirements.txt
+    python: "3.11"
+
+python:
+    install:
+      - requirements: docs/requirements.txt

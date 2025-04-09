@@ -1,3 +1,7 @@
+"""Opp Ini - Tools for managing the SAURON system configuration."""
+
+__version__ = "0.1.0"
+
 import os
 import shutil
 
@@ -8,7 +12,14 @@ from enum import Enum
 # from pprint import pprint
 
 # ----- Constants ----- #
-SAURON_ROOT = os.environ["SAURON_ROOT"]
+# SAURON_ROOT = os.environ["SAURON_ROOT"]
+
+try:
+    SAURON_ROOT = os.environ["SAURON_ROOT"]
+except KeyError:
+    SAURON_ROOT = None
+    if __name__ == "__main__":
+        raise RuntimeError("SAURON_ROOT is required to run this program.")
 
 
 # ----- Classes ----- #

@@ -8,6 +8,5 @@ API
 
 .. automodule:: opp_ini
    :members:
-   :no-index:
    :undoc-members:
    :show-inheritance:

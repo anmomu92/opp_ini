@@ -3,7 +3,7 @@ opp_ini
 
 **opp_ini** is a Python library for interfacing with the omnetpp.ini configuration file in OMNet++.
 
-# Installation
+Usage
 =====
 
 .. _installation:

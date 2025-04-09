@@ -1,4 +1,4 @@
-"""Opp Ini - Tools for managing the SAURON system configuration."""
+"""Opp Ini - Tools for managing the OMNet++ configuration configuration file."""
 
 __version__ = "0.1.0"
 
@@ -29,57 +29,80 @@ except KeyError:
 
 
 class Simulation:
-    """
-    This class represents a simulation
-    It contains methods to write and read simulations
+    """A class representing a simulation.
+
+    This class provides functionality to add/remove configuration parameters in the omnetpp.ini file.
+    It holds instances of interconnection network elements (topology, switch, application).
+
+    Attributes:
+        root_dir (str): Path to the root of the simulation within the SAURON file system.
+        topology (Topology): Topology to be simulated.
+        switch (Switch): Switch to be simulated.
+        app (Application): Application to be simulated.
     """
 
     def __init__(self):
+        """Initializes the Simulation with default values."""
         self.root_dir = ""
         self.topology = Topology()
         self.switch = Switch()
         self.app = Application()
 
     def __del__(self):
+        """Deletes the simulation."""
         print(
             f"Simulation with root directory {self.root_dir} is being destroyed"
         )
 
-    ###########
-    # Setters
-    ###########
-    def set_root_dir(self, topology_name):
-        self.root_dir = SAURON_ROOT + "/simulations/" + topology_name
+    # ----- Setters ----- #
 
-    # def set_config(self, *args):
-    #    aux = ""
-    #    for i in range(len(args)):
-    #        aux = aux + args[i]
-    #        self.config.append(aux)
+    def set_root_dir(self, topology_name):
+        """
+        Sets the root directory of the simulation.
+
+        Args:
+            - topology_name (str): The name of the topology to be simulated.
+        """
+        self.root_dir = SAURON_ROOT + "/simulations/" + topology_name
 
     def set_topo(self, topo):
         """
-        Sets the topology object.
+        Sets the topology.
 
         Args:
-            - arg (str): the substrings that will be concatenated to the configuration name
+            - topo (Topology): The object containing topology parameters.
         """
         self.topology = topo
 
     def set_sw(self, sw):
+        """
+        Sets the switch.
+
+        Args:
+            - sw (Switch): The object containing switch parameters.
+        """
         self.switch = sw
 
     def set_app(self, app):
+        """
+        Sets the application.
+
+        Args:
+            - app (Application): The object containing application parameters.
+        """
         self.app = app
 
     ###########
     # Getters
     ###########
-    def get_root_dir(self):
-        return self.root_dir
+    def get_root_dir(self) -> str:
+        """
+        Gets the root directory of the simulation.
 
-    def get_config(self):
-        return self.config
+        Returns:
+            - str: The name of the root directory of the simulation.
+        """
+        return self.root_dir
 
 
 class Topology:

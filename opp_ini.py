@@ -56,7 +56,7 @@ class Simulation:
 
     # ----- Setters ----- #
 
-    def set_root_dir(self, topology_name):
+    def set_root_dir(self, topology_name: str):
         """
         Sets the root directory of the simulation.
 
@@ -65,7 +65,7 @@ class Simulation:
         """
         self.root_dir = SAURON_ROOT + "/simulations/" + topology_name
 
-    def set_topo(self, topo):
+    def set_topo(self, topo: Topology):
         """
         Sets the topology.
 
@@ -74,7 +74,7 @@ class Simulation:
         """
         self.topology = topo
 
-    def set_sw(self, sw):
+    def set_sw(self, sw: Switch):
         """
         Sets the switch.
 
@@ -83,7 +83,7 @@ class Simulation:
         """
         self.switch = sw
 
-    def set_app(self, app):
+    def set_app(self, app: Application):
         """
         Sets the application.
 

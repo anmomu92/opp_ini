@@ -1,3 +1,4 @@
+# Python-related stuff
 venv
 .venv
 __pycache__/
@@ -5,3 +6,13 @@ opp_ini/__pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Sphinx build output
+docs/build
+docs/_build
+
+# Coverage or doctest-related files (optional)
+docs/.doctrees/
+
+# Tox environments (if using tox)
+.tox/

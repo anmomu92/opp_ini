@@ -1,4 +1,4 @@
-"""Opp Ini - Tools for managing the OMNet++ configuration configuration file."""
+"""opp_ini - Tools for managing the OMNet++ configuration configuration file."""
 
 __version__ = "0.1.0"
 
@@ -65,7 +65,7 @@ class Simulation:
         """
         self.root_dir = SAURON_ROOT + "/simulations/" + topology_name
 
-    def set_topo(self, topo):
+    def set_topo(self, topo: "Topology"):
         """
         Sets the topology.
 
@@ -74,7 +74,7 @@ class Simulation:
         """
         self.topology = topo
 
-    def set_sw(self, sw):
+    def set_sw(self, sw: "Switch"):
         """
         Sets the switch.
 
@@ -83,7 +83,7 @@ class Simulation:
         """
         self.switch = sw
 
-    def set_app(self, app):
+    def set_app(self, app: "Application"):
         """
         Sets the application.
 

@@ -61,7 +61,7 @@ class Simulation:
         Sets the root directory of the simulation.
 
         Args:
-            - topology_name (str): The name of the topology to be simulated.
+            topology_name (str): The name of the topology to be simulated.
         """
         self.root_dir = SAURON_ROOT + "/simulations/" + topology_name
 
@@ -70,7 +70,7 @@ class Simulation:
         Sets the topology.
 
         Args:
-            - topo (Topology): The object containing topology parameters.
+            topo (Topology): The object containing topology parameters.
         """
         self.topology = topo
 
@@ -79,7 +79,7 @@ class Simulation:
         Sets the switch.
 
         Args:
-            - sw (Switch): The object containing switch parameters.
+            sw (Switch): The object containing switch parameters.
         """
         self.switch = sw
 
@@ -88,7 +88,7 @@ class Simulation:
         Sets the application.
 
         Args:
-            - app (Application): The object containing application parameters.
+            app (Application): The object containing application parameters.
         """
         self.app = app
 
@@ -100,7 +100,7 @@ class Simulation:
         Gets the root directory of the simulation.
 
         Returns:
-            - str: The name of the root directory of the simulation.
+            str: The name of the root directory of the simulation.
         """
         return self.root_dir
 

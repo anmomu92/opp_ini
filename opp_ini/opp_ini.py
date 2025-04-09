@@ -72,14 +72,16 @@ class Simulation:
 
 
 class Topology:
-    """
-    This class represents a generic topology
-    It has attributes and methods common to every topology
-    It is the base class of other more specific classes
-    Current derived classes that have been implemented:
-        - RLFT
-        - Torus
-            - Torus2D
+    """A class representing a topology in a simulation.
+
+    This class provides functionality to add/remove topology parameters,
+    It is designed to hold the parameters to configure omnetpp_ini files.
+
+    Attributes:
+        name (str): Name of the topology.
+        network (str): Name of the simulation folder the omnetpp_ini file is located.
+        channel_distance (int): Distance of the channels in the topology.
+        nodes (int): The number of nodes that the topology contains.
     """
 
     def __init__(self):

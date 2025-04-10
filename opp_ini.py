@@ -570,19 +570,29 @@ class RLFT(Topology):
 
 
 class Torus(Topology):
-    """
-    This is a class representing a Torus of generic dimension
+    """A class representing a Torus topology.
 
-    :param Topology: the parent class topology
+    This class provides functionality to add/remove Torus-specific parameters.
+
+    Attributes:
+        name (str): Name of the topology.
+        dimensions (int): The number of dimensions that the topology contains.
     """
 
     def __init__(self, parent=None):
+        """Initializes the Torus topology with default values"""
         super().__init__()
         self.parent = parent
         self.name = "torus"
         self.dimensions = 0
 
-    def get_dimensions(self):
+    def get_dimensions(self) -> int:
+        """
+        Gets the number of dimensions of the RLFT network.
+
+        Returns:
+            int: Number of dimenstions of the torus.
+        """
         return self.dimensions
 
 

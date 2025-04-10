@@ -119,33 +119,65 @@ class Topology:
     """
 
     def __init__(self):
+        """Initializes the Simulation with default values."""
         self.name = "rlft"
         self.network = "RLFT"
         self.channel_distance = 5
         self.nodes = 0
 
     def __del__(self):
+        """Deletes the topology"""
         print(f"Topology with name {self.name} is being destroyed")
 
     ###########
     # Setters
     ###########
-    def set_channel_distance(self, distance):
+    def set_channel_distance(self, distance: int):
+        """
+        Sets the distance of the channels.
+
+        Args:
+            distance (int): The distance in meters.
+        """
         self.channel_distance = distance
 
     ###########
     # Getters
     ###########
-    def get_name(self):
+    def get_name(self) -> str:
+        """
+        Gets the name of the topology.
+
+        Returns:
+            str: The name of the topology.
+        """
         return self.name
 
-    def get_channel_distance(self):
+    def get_channel_distance(self) -> int:
+        """
+        Gets the distance of the channels.
+
+        Returns:
+            int: The distance of the channels.
+        """
         return self.channel_distance
 
-    def get_network(self):
+    def get_network(self) -> str:
+        """
+        Gets the name of the network.
+
+        Returns:
+            str: The name of the network.
+        """
         return self.network
 
-    def get_nodes(self):
+    def get_nodes(self) -> int:
+        """
+        Gets the number of nodes.
+
+        Returns:
+            int: The number of nodes.
+        """
         return self.nodes
 
 

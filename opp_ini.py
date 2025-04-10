@@ -588,48 +588,92 @@ class Torus(Topology):
 
     def get_dimensions(self) -> int:
         """
-        Gets the number of dimensions of the RLFT network.
+        Gets the number of dimensions of the torus network.
 
         Returns:
-            int: Number of dimenstions of the torus.
+            int: Number of dimensions of the torus.
         """
         return self.dimensions
 
 
 class Torus2D(Torus):
-    """
-    This is a class representing a Torus of two dimensions
+    """A class representing a Torus2D topology.
 
-    :param Topology: the parent class topology
+    This class provides functionality to add/remove Torus2D-specific parameters.
+
+    Attributes:
+        network (str): Network name.
+        dim1 (int): Size of dimension 1.
+        dim2 (int): Size of dimension 2.
     """
 
     def __init__(self, parent=None):
+        """Initializes the torus2D network with default values."""
         super().__init__()
         self.parent = parent
         self.network = "Torus2D"
         self.dim1 = 0
         self.dim2 = 0
 
-    # Setters
-    def set_dim1(self, dim1):
+    # ----- Setters ----- #
+
+    def set_dim1(self, dim1: int):
+        """
+        Sets the size of dimension 1 of the Torus2D network.
+
+        Args:
+            dim1 (int): Size of the dimension 1.
+        """
         self.dim1 = dim1
         self.set_nodes(self.dim1, self.dim2)
 
-    def set_dim2(self, dim2):
+    def set_dim2(self, dim2: int):
+        """
+        Sets the size of dimension 2 of the Torus2D network.
+
+        Args:
+            dim2 (int): Size of the dimension 2.
+        """
         self.dim2 = dim2
         self.set_nodes(self.dim1, self.dim2)
 
-    def set_nodes(self, dim1, dim2):
+    def set_nodes(self, dim1: int, dim2: int):
+        """
+        Sets the number of nodes of the Torus2D network.
+
+        Args:
+            dim1 (int): Size of the dimension 1.
+            dim2 (int): Size of the dimension 2.
+        """
         self.nodes = dim1 * dim2
 
-    # Getters
-    def get_dim1(self):
+    # ----- Getters ----- #
+
+    def get_dim1(self) -> int:
+        """
+        Gets the size of dimension 1 of the Torus2D network.
+
+        Returns:
+            int: Size of dimension 1 of the Torus2D.
+        """
         return self.dim1
 
-    def get_dim2(self):
+    def get_dim2(self) -> int:
+        """
+        Gets the size of dimension 2 of the Torus2D network.
+
+        Returns:
+            int: Size of dimension 2 of the Torus2D.
+        """
         return self.dim2
 
-    def get_nodes(self):
+    def get_nodes(self) -> int:
+        """
+        Gets the number of nodes of the Torus2D network.
+
+        Returns:
+            int: Size of dimension 1 of the Torus2D.
+        """
         return self.nodes
 
 

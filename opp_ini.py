@@ -108,8 +108,7 @@ class Simulation:
 class Topology:
     """A class representing a topology in a simulation.
 
-    This class provides functionality to add/remove topology parameters,
-    It is designed to hold the parameters to configure omnetpp_ini files.
+    This class provides functionality to add/remove topology parameters.
 
     Attributes:
         name (str): Name of the topology.
@@ -119,7 +118,7 @@ class Topology:
     """
 
     def __init__(self):
-        """Initializes the Simulation with default values."""
+        """Initializes the topology with default values."""
         self.name = "rlft"
         self.network = "RLFT"
         self.channel_distance = 5
@@ -182,77 +181,183 @@ class Topology:
 
 
 class Switch:
-    """
-    This class represents a generic switch
-    It has attributes and methods common to every topology
-    It is the base class of other more specific classes
+    """A class representing a switch in a simulation.
+
+    This class provides functionality to add/remove switch parameters.
+
+    Attributes:
+        architecture (str): Architecture of the switch.
+        arbiter (str): Arbiter used by the switch.
+        voq (bool): Whether the switch uses VOQs or not.
+        queue_scheme (str): Queue scheme used in the switch.
+        bubble (bool): Whether the switch uses bubble or not.
+        request_processing_time (int): Time it takes the switch to process requests.
     """
 
     # Class attributes
     def __init__(self):
-        # pass
-        self.architecture = ""
-        self.arbiter = ""
-        self.voq = ""
-        self.queue_scheme = ""
-        self.num_queues = -1
-        self.routing = ""
+        """Initializes the switch with default values."""
+        self.architecture = "IB_DDR"
+        self.arbiter = "Arbiter_TwoPhased"
+        self.voq = False
+        self.queue_scheme = "1q"
+        self.num_queues = 1
+        self.routing = "xy"
         self.bubble = False
         self.request_processing_time = 6  # in nanoseconds
 
     def __del__(self):
+        """Deletes the switch"""
         print(
             f"Switch with architecture {self.architecture} is being destroyed"
         )
 
-    # Setters
-    def set_architecture(self, architecture):
+    # ----- Setters ----- #
+
+    def set_architecture(self, architecture: str):
+        """
+        Sets the architecture of the switch.
+
+        Args:
+            architecture (str): Architecture of the switch
+        """
         self.architecture = architecture
 
-    def set_arbiter(self, arbiter):
+    def set_arbiter(self, arbiter: str):
+        """
+        Sets the arbiter of the switch.
+
+        Args:
+            architecture (str): Architecture of the switch.
+        """
         self.arbiter = arbiter
 
-    def set_voq(self, voq):
+    def set_voq(self, voq: bool):
+        """
+        Sets if VOQs are active.
+
+        Args:
+            voq (bool): True if active, False if inactive.
+        """
         self.voq = voq
 
-    def set_queue_scheme(self, queue_scheme):
+    def set_queue_scheme(self, queue_scheme: str):
+        """
+        Sets queueing scheme.
+
+        Args:
+            queue_scheme (str): Queue scheme.
+        """
         self.queue_scheme = queue_scheme
 
-    def set_num_queues(self, num_queues):
+    def set_num_queues(self, num_queues: int):
+        """
+        Sets the number of queues of the queueing scheme.
+
+        Args:
+            num_queues (str): Number of queues.
+        """
         self.num_queues = num_queues
 
-    def set_routing(self, routing):
+    def set_routing(self, routing: str):
+        """
+        Sets the routing algorithm of the switch.
+
+        Args:
+            routing (str): Routing algorithm.
+        """
         self.routing = routing
 
-    def set_bubble(self, bubble):
+    def set_bubble(self, bubble: bool):
+        """
+        Sets the bubbles.
+
+        Args:
+            bubble (bool): True if active, False if inactive.
+        """
         self.bubble = bubble
 
-    def set_request_processing_time(self, request_processing_time):
+    def set_request_processing_time(self, request_processing_time: int):
+        """
+        Sets the request processing time.
+
+        Args:
+            request_processing_time (int): Time it takes the switch to process each request.
+        """
         self.request_processing_time = request_processing_time
 
-    # Getters
-    def get_architecture(self):
+    # ----- Getters ----- #
+
+    def get_architecture(self) -> str:
+        """
+        Gets the name of the switch architecture.
+
+        Returns:
+            str: Name of the switch architecture.
+        """
         return self.architecture
 
-    def get_arbiter(self):
+    def get_arbiter(self) -> str:
+        """
+        Gets the name of the switch arbiter.
+
+        Returns:
+            str: Name of the switch arbiter.
+        """
         return self.arbiter
 
-    def get_voq(self):
+    def get_voq(self) -> bool:
+        """
+        Checks if VOQs are active.
+
+        Returns:
+            bool: True if active, False if inactive.
+        """
         return self.voq
 
-    def get_queue_scheme(self):
+    def get_queue_scheme(self) -> str:
+        """
+        Gets the queue scheme.
+
+        Returns:
+            str: Name of the switch queue scheme.
+        """
         return self.queue_scheme
 
-    def get_num_queues(self):
+    def get_num_queues(self) -> int:
+        """
+        Gets the number of queues used by the queue scheme.
+
+        Returns:
+            int: Number of queues in the queue scheme.
+        """
         return self.num_queues
 
-    def get_routing(self):
+    def get_routing(self) -> str:
+        """
+        Gets the name of the routing algorithm used by the switch.
+
+        Returns:
+            str: Name of the switch routing algorithm.
+        """
         return self.routing
 
-    def get_bubble(self):
+    def get_bubble(self) -> bool:
+        """
+        Checks if bubble is active.
+
+        Returns:
+            bool: True if active, False if inactive.
+        """
         return self.bubble
 
     def get_request_processing_time(self):
+        """
+        Gets the request processing time of the switch.
+
+        Returns:
+            int: Time it takes the switch to process a request.
+        """
         return self.request_processing_time
 
 

@@ -681,29 +681,35 @@ class Torus2D(Torus):
 
 
 class IB_NDR(Switch):
-    """
-    This is a class representing the IB_NDR switch architecture
+    """A class representing an IB_NDR switch in a simulation.
 
-    :param Switch: the parent switch class
+    This class provides functionality to add/remove IB_NDR switch parameters.
+
+    Attributes:
+        architecture (str): Architecture of the switch.
     """
 
     def __init__(self, parent=None):
+        """Initializes the IB_NDR switch with default values."""
         super().__init__()
         self.parent = parent
         self.architecture = "IB_NDR"
 
 
 class BXI3(Switch):
-    """
-    This is a class representing the BXI3 switch architecture
+    """A class representing an IB_NDR switch in a simulation.
 
-    :param Switch: the parent switch class
+    This class provides functionality to add/remove IB_NDR switch parameters.
+
+    Attributes:
+        architecture (str): Architecture of the switch.
     """
 
     def __init__(self, parent=None):
+        """Initializes the BXI3 switch with default values."""
         super().__init__()
         self.parent = parent
-        self.architecture = "bxi3"
+        self.architecture = "BXI3"
 
 
 # Derived from Application

@@ -351,7 +351,7 @@ class Switch:
         """
         return self.bubble
 
-    def get_request_processing_time(self):
+    def get_request_processing_time(self) -> int:
         """
         Gets the request processing time of the switch.
 
@@ -362,13 +362,21 @@ class Switch:
 
 
 class Application:
-    """
-    This class represents a generic application
-    It has attributes and methods common to every application
-    It is the base class of other more specific applications
+    """A class representing an application in a simulation.
+
+    This class provides functionality to add/remove application parameters.
+
+    Attributes:
+        name (str): Name of the application.
+        message_size (int): Size of the message.
+        initial_load (int): Initial load of the simulation, if steps is greater than one.
+        final_load (int): Final load of he simulation, if steps is greater than one.
+        steps (int): Number of steps performed during the simulations, with increasing load.
+        file_name (str): Type of application.
     """
 
     def __init__(self):
+        """Initializes the application with default values."""
         self.name = "Application"
         self.message_size = 0
         self.initial_load = 0
@@ -377,42 +385,97 @@ class Application:
         self.file_name = "R"
 
     def __del__(self):
+        "Deletes the application."
         print(f"Application with name {self.name} is being destroyed")
 
-    ###########
-    # Setters
-    ###########
-    def set_message_size(self, msg_size):
+    # ----- Setters ----- #
+
+    def set_message_size(self, msg_size: int):
+        """
+        Sets the size of the messages sent by the application.
+
+        Args:
+            msg_size (int): Size of the message.
+        """
         self.message_size = msg_size
 
     def set_load(self, initial=0, final=100, steps=0):
+        """
+        Sets the loads of the application.
+
+        Args:
+            initial (int): Initial load.
+            final (int): Final load.
+            steps (int): Number of steps.
+        """
         self.initial_load = initial
         self.final_load = final
         self.steps = steps
 
-    def set_filename(self, filename):
+    def set_filename(self, filename: str):
+        """
+        Sets the type of application.
+
+        Args:
+            filename (str): Type of application.
+        """
         self.file_name = filename
 
-    ###########
-    # Getters
-    ###########
-    def get_name(self):
+    # ----- Getters ----- #
+
+    def get_name(self) -> str:
+        """
+        Gets the name of the application.
+
+        Returns:
+            str: Name of the application.
+        """
         return self.name
 
-    def get_msg_size(self):
+    def get_msg_size(self) -> int:
+        """
+        Gets the size of the message sent by the application.
+
+        Returns:
+            str: Message size of the application.
+        """
         return self.message_size
 
-    def get_initial_load(self):
+    def get_initial_load(self) -> int:
+        """
+        Gets the initial load of the simulation.
+
+        Returns:
+            int: Initial load.
+        """
         return self.initial_load
 
-    def get_final_load(self):
+    def get_final_load(self) -> int:
+        """
+        Gets the final load of the simulation.
+
+        Returns:
+            int: Final load.
+        """
         return self.final_load
 
-    def get_steps(self):
+    def get_steps(self) -> int:
+        """
+        Gets the steps that will be perform during the simulation.
+
+        Returns:
+            int: Steps to be performed during the simulation.
+        """
         return self.steps
 
-    def get_filename(self):
-        return self.filename
+    def get_filename(self) -> str:
+        """
+        Gets the type of application.
+
+        Returns:
+            str: Type of application.
+        """
+        return self.file_name
 
 
 # Derived from Topology

@@ -482,13 +482,21 @@ class Application:
 
 
 class RLFT(Topology):
-    """
-    This is a class representing a Real Life Fat Tree topology
+    """A class representing a RLFT topology.
 
-    :param Topology: the parent class topology
+    This class provides functionality to add/remove RLFT-specific parameters.
+
+    Attributes:
+        name (str): Name of the topology.
+        network (str): Name of the simulation folder the omnetpp_ini file is located.
+        channel_distance (int): Distance of the channels in the topology.
+        arity (int): Half of the number of ports of the switch.
+        stages (int): Number of staes of the network.
+        nodes (int): The number of nodes that the topology contains.
     """
 
     def __init__(self, parent=None):
+        """Initializes the RLFT topology with default values."""
         super().__init__()
         self.parent = parent
         self.name = "rlft"
@@ -497,26 +505,67 @@ class RLFT(Topology):
         self.stages = 0
         self.nodes = 0
 
-    def set_arity(self, arity):
+    # ----- Setters ----- #
+
+    def set_arity(self, arity: int):
+        """
+        Sets the arity of the RLFT network.
+
+        Args:
+            arity (int): Arity of the network.
+        """
         self.arity = arity
         self.set_nodes(self.arity, self.stages)
 
-    def set_stages(self, stages):
+    def set_stages(self, stages: int):
+        """
+        Sets the number of stages of the RLFT network.
+
+        Args:
+            stages (int): Number of stages of the network.
+        """
         self.stages = stages
         self.set_nodes(self.arity, self.stages)
 
-    def set_nodes(self, arity, stages):
+    def set_nodes(self, arity: int, stages: int):
+        """
+        Sets the number of nodes of the RLFT network.
+
+        Args:
+            arity (int): Arity of the network.
+            stages (int): Number of stages of the network.
+        """
         self.arity = arity
         self.stages = stages
         self.nodes = 2 * (pow(arity, stages))
 
-    def get_arity(self):
+    # ----- Getters ----- #
+
+    def get_arity(self) -> int:
+        """
+        Gets the arity of the RLFT network.
+
+        Returns:
+            int: Arity of the network.
+        """
         return self.arity
 
-    def get_stages(self):
+    def get_stages(self) -> int:
+        """
+        Gets the number of stages of the RLFT network.
+
+        Returns:
+            int: Number of stages of the network.
+        """
         return self.stages
 
-    def get_nodes(self):
+    def get_nodes(self) -> int:
+        """
+        Gets the number of nodes of the RLFT network.
+
+        Returns:
+            int: Number of nodes of the network.
+        """
         return self.nodes
 
 
